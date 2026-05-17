@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Notes Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+
+  <div class="container">
+    <h1>Study Better, Not Harder</h1>
+    
+    <textarea id="inputText" placeholder="Paste your study material here..."></textarea>
+    <input type = "file" id = "pdfUpload" accept=".pdf" >
+
+    <button onclick="generateNotes()">
+      Generate Notes
+    </button>
+
+    <div id="output"></div>
+  </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

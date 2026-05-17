@@ -1,0 +1,99 @@
+body {
+  font-family: Papyrus, sans-serif;
+  color: white;
+  margin: 0;
+  min-height: 100vh;
+
+  /* Center content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+
+  /* Dark futuristic background */
+  background:
+    radial-gradient(circle at left, rgba(26, 31, 30, 0.5), transparent 50%),
+    radial-gradient(circle at right, rgba(19, 20, 23, 0.5), transparent 50%),
+    radial-gradient(circle, rgba(0, 0, 0, 0.9), #1b2328 70%);
+}
+
+/* Glowing horizontal effect */
+body::before {
+  content: '';
+  position: absolute;
+  top: 38%;
+  width: 100%;
+  height: 2px;
+  background: rgba(0,255,200,0.2);
+  filter: blur(5px);
+}
+
+.container {
+  width: 700px;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+  margin-top: 20px;
+
+  /* Glassmorphism effect */
+  background: rgba(20,26,28,0.65);
+  border: 1px solid rgba(0,255,200,0.2);
+  border-radius: 8px;
+
+  color: white;
+  font-size: 16px;
+  backdrop-filter: blur(8px);
+}
+
+textarea:focus {
+  border-color: rgba(0,255,200,0.6);
+  box-shadow: 0 0 15px rgba(0,255,200,0.2);
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 28px;
+
+  background: #008b75;
+  color: white;
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00a88f;
+}
+
+#output {
+  margin-top: 30px;
+  padding: 25px;
+
+  background: rgba(16,22,24,0.75);
+  border-radius: 12px;
+}
+/* Default (desktop) */
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+}
